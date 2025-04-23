@@ -5,7 +5,7 @@ metadata:
 spec:
   type: NodePort # ClusterIp, # NodePort 
   selector:
-    app: myapp1
+    app: myapp3
   ports: 
     - name: http
       port: 80 # Service Port
