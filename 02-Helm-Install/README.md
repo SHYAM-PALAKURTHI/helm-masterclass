@@ -8,7 +8,7 @@
 - helm search repo
 - helm install
 - helm list
-- helm uninstall 
+- helm uninstall <application_name> 
 
 ## Step-02: List, Add and Search Helm Repository
 - [Bitnami Applications packaged using Helm](https://bitnami.com/stacks/helm)
