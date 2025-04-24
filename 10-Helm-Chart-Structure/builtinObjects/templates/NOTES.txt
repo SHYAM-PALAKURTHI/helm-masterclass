@@ -1,2 +1,41 @@
+{{/*Test Data: */}}
 {{/* Root or Dot or period Object */}}
-Root Object {{ . }}
+{{/*Root Object {{ . }}*/}}
+
+{{/* Release Object */}}
+Release Name: {{ .Release.Name }}
+Release Namespace: {{ .Release.Namespace }}
+Release IsUpgrade: {{ .Release.IsUpgrade }}
+Release IsInstall: {{ .Release.IsInstall }}
+Release Revision: {{ .Release.Revision }}
+Release Service: {{ .Release.Service }}
+
+{{/* Chart Objet */}}
+Chart Name: {{ .Chart.Name }}
+Chart Version: {{ .Chart.Version }}
+Chart AppVersion: {{ .Chart.AppVersion }}
+Chart Type: {{ .Chart.Type }}
+Chart Name and Version: {{ .Chart.Name }}-{{ .Chart.Version }}
+
+{{/* Values Object */}}
+Replica Count: {{ .Values.replicaCount }}
+Image Repository: {{ .Values.image.repository }}
+Service Type: {{ .Values.service.type }}
+targetCPUUtilizationPercentage : {{.Values.autoscaling.targetCPUUtilizationPercentage}}
+
+{{/* Capabilities Object */}}
+Kubernetes Cluster Version Major: {{ .Capabilities.KubeVersion.Major }}
+Kubernetes Cluster Version Minor: {{ .Capabilities.KubeVersion.Minor }}
+Kubernetes Cluster Version: {{ .Capabilities.KubeVersion }} and {{ .Capabilities.KubeVersion.Version }}
+Helm Version: {{ .Capabilities.HelmVersion }}
+Helm Version Semver: {{ .Capabilities.HelmVersion.Version }}
+
+{{/* Template Object */}}
+Template Name: {{ .Template.Name }} 
+Template Base Path: {{ .Template.BasePath }}
+
+{{/* Files Object */}}
+File get: {{.Files.Get "myconfig1.toml"}}
+Files glob: {{ (.Files.Glob "myconfig*" ).AsConfig}}
+
+
