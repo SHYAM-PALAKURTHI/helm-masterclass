@@ -1,0 +1,2 @@
+{{/* Root or Dot or period Object */}}
+Root Object {{ . }}
