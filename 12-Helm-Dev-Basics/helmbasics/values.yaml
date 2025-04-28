@@ -1,5 +1,5 @@
-releaseName: "kalyan"
-replicaCount: 0
+releaseName: "shyam_101"
+replicaCount: 10
 
 # Resources for testing Template Function: toYaml 
 resources: 
